@@ -1,0 +1,17 @@
+.cta {
+  padding: 80px 5%;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary), #e55a2b);
+}
+
+.cta h2 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  margin-bottom: 30px;
+}
