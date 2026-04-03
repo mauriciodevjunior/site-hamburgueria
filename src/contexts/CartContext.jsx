@@ -332,7 +332,7 @@ export function CartProvider({ children }) {
             return null;
         }
         const message = generateWhatsAppMessage(state);
-        return `https://wa.me/5511999999999?text=${message}`;
+        return `https://wa.me/5551995010567?text=${message}`;
     };
 
     // Validações

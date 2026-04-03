@@ -172,7 +172,7 @@ export default function Checkout() {
                                     onChange={(e) =>
                                         handleCustomerChange("phone", e.target.value)
                                     }
-                                    placeholder="(11) 99999-9999"
+                                    placeholder="(55) 51999-99999"
                                     required
                                 />
                                 {errors.phone && <span className="error">{errors.phone}</span>}

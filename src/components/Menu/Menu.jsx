@@ -89,7 +89,7 @@ export default function Menu() {
                                 Adicionar ao Carrinho
                             </button>
                             <a
-                                href={`https://wa.me/5511999999999?text=Olá! Gostaria de pedir um ${item.name}`} target="_blank"
+                                href={`https://wa.me/5551995010567?text=Olá! Gostaria de pedir um ${item.name}`} target="_blank"
                                 className="btn btn-outline"
                             >
                                 Pedir Agora
