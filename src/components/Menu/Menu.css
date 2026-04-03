@@ -1,22 +1,22 @@
 .cardapio {
-  padding: 80px 5%;
+  padding: clamp(50px, 8vw, 80px) 5%;
   text-align: center;
 }
 
 .cardapio h2 {
-  font-size: 36px;
+  font-size: clamp(28px, 5vw, 36px);
   margin-bottom: 10px;
 }
 
 .cardapio p {
   color: var(--gray);
-  margin-bottom: 50px;
+  margin-bottom: clamp(30px, 5vw, 50px);
 }
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(20px, 4vw, 30px);
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -28,11 +28,16 @@
   overflow: hidden;
   box-shadow: var(--shadow);
   text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.menu-grid li:hover {
+  transform: translateY(-4px);
 }
 
 .menu-grid li img {
   width: 100%;
-  height: 200px;
+  height: clamp(160px, 25vw, 200px);
   object-fit: cover;
 }
 
@@ -50,36 +55,51 @@
 
 .menu-grid h3 {
   padding: 20px 20px 10px;
-  font-size: 20px;
+  font-size: clamp(18px, 3.5vw, 20px);
 }
 
 .menu-grid p {
-  padding: 0 20px;
-  font-size: 14px;
+  padding: 0 20px 15px;
+  font-size: clamp(14px, 2.5vw, 16px);
   color: var(--gray);
+  line-height: 1.5;
 }
 
 .menu-grid strong {
   display: block;
-  padding: 15px 20px 0;
-  font-size: 22px;
+  padding: 0 20px 20px;
+  font-size: clamp(20px, 4vw, 22px);
   color: var(--primary);
 }
 
-.menu-grid .btn {
-  display: block;
-  margin: 15px 20px 20px;
-  text-align: center;
-  padding: 10px;
-}
 .menu-item-actions {
   display: flex;
   gap: 10px;
-  padding: 15px 20px 20px;
+  padding: 0 20px 20px;
 }
 
 .menu-item-actions .btn {
   flex: 1;
   text-align: center;
-  padding: 10px;
+  padding: 12px;
+  font-size: clamp(14px, 2.5vw, 16px);
+}
+
+/* Tablet - ajustes finos */
+@media (max-width: 992px) {
+  .menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+/* Mobile - cards maiores para melhor toque */
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .menu-item-actions {
+    flex-direction: column;
+  }
 }

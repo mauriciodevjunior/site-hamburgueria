@@ -1,22 +1,19 @@
 .cart-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
   z-index: 1000;
 }
 
 .cart {
   background: white;
   border-radius: var(--radius);
-  width: 90%;
-  max-width: 500px;
-  max-height: 80vh;
+  width: min(100%, 500px);
+  max-height: min(85vh, 700px);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -62,10 +59,12 @@
   height: 60px;
   border-radius: 8px;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .cart-item-info {
   flex: 1;
+  min-width: 0;
 }
 
 .cart-item-info h4 {
@@ -83,6 +82,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .cart-item-controls button {
@@ -116,6 +116,10 @@
   background: #f9f9f9;
 }
 
+.cart-summary {
+  margin-bottom: 15px;
+}
+
 .cart-total {
   margin-bottom: 15px;
 }
@@ -123,6 +127,12 @@
 .cart-total strong {
   font-size: 18px;
   color: var(--primary);
+}
+
+.cart-discount {
+  color: #28a745;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .cart-actions {
@@ -135,12 +145,71 @@
   padding: 12px;
 }
 
-.cart-summary {
-  margin-bottom: 15px;
+/* Tablet */
+@media (max-width: 768px) {
+  .cart-overlay {
+    padding: 12px;
+    align-items: flex-end;
+  }
+
+  .cart {
+    width: 100%;
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .cart-header,
+  .cart-footer {
+    padding: 16px;
+  }
+
+  .cart-items {
+    padding: 0 16px;
+  }
+
+  .cart-item {
+    gap: 12px;
+  }
+
+  .cart-actions {
+    flex-direction: column;
+  }
+
+  .cart-actions .btn {
+    width: 100%;
+  }
 }
 
-.cart-discount {
-  color: #28a745;
-  font-size: 14px;
-  margin-top: 5px;
+/* Mobile menor */
+@media (max-width: 480px) {
+  .cart-item {
+    align-items: flex-start;
+  }
+
+  .cart-item img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .cart-item-info h4 {
+    font-size: 15px;
+  }
+
+  .cart-item-info p {
+    font-size: 14px;
+  }
+
+  .cart-item-controls {
+    gap: 8px;
+  }
+
+  .cart-item-controls button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .remove-btn {
+    margin-left: 0;
+  }
 }

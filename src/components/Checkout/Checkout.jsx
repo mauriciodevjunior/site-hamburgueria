@@ -65,6 +65,7 @@ export default function Checkout() {
 
         if (whatsappUrl) {
             window.open(whatsappUrl, "_blank");
+            toggleCheckout();
             // Aqui você poderia limpar o carrinho ou redirecionar
         }
     };

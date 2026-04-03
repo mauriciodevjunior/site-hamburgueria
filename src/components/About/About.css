@@ -8,22 +8,48 @@
 }
 
 .sobre img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: var(--radius);
-  box-sizing: var(--shadow);
+  box-shadow: var(--shadow);
+  display: block;
 }
 
 .sobre h2 {
-  font-size: 36px;
+  font-size: clamp(28px, 4vw, 36px);
   margin-bottom: 20px;
 }
 
 .sobre article {
   color: var(--gray);
   margin-bottom: 30px;
+  line-height: 1.6;
 }
 
 .sobre ul {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .sobre {
+    gap: 40px;
+    padding: 60px 5%;
+  }
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  .sobre {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 50px 5%;
+  }
+
+  .sobre h2 {
+    font-size: clamp(24px, 6vw, 32px);
+  }
 }
