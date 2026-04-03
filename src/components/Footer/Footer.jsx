@@ -15,7 +15,7 @@ export default function Footer() {
 
             <section>
                 <h4>Contato</h4>
-                <p>📱 (11) 99999-9999 📍 Rua dos Hambúrgueres, 123</p>
+                <p>📱 (51) 99501-0567 📍 Rua dos Hambúrgueres, 123</p>
             </section>
 
             <section>

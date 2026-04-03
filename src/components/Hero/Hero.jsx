@@ -14,7 +14,7 @@ export default function Hero() {
                         <a href="#cardapio" className="btn">
                             Ver cardápio
                         </a>
-                        <a href="https://wa.me/5511999999999" target="_blank" className="btn btn-outline">
+                        <a href="https://wa.me/5551995010567" target="_blank" className="btn btn-outline">
                             📲 WhatsApp
                         </a>
                     </nav>

@@ -21,7 +21,7 @@ export default function Header() {
                     🛒 {itemCount > 0 && <span className="cart-count">{itemCount}</span>}
                 </button>
                 <a
-                    href="https://wa.me/55519995010567?text=Olá!%20Quero%20fazer%20um%20pedido"
+                    href="https://wa.me/5551995010567?text=Olá!%20Quero%20fazer%20um%20pedido"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn"
